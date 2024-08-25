@@ -1,4 +1,5 @@
-import StarIcon from "@/assets/icons/star.svg" 
+import StarIcon from "@/assets/icons/star.svg"
+import { motion } from 'framer-motion'
 
 const pros = [
   "Performant",

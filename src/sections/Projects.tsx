@@ -4,8 +4,8 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
-
+import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -42,43 +42,34 @@ const portfolioProjects = [
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage
+  },
+  {
+    company: "Innovative Co",
+    year: "2021",
+    title: "Saas Landing Page",
+    results: [
+      { title: "Boosted sales by 20%" },
+      { title: "Expanded customer reach by 35%" },
+      { title: "Increased brand awareness by 15%" }
+    ],
+    link: "https://youtu.be/7hi5zwO75yc",
+    image: lightSaasLandingPage
   }
 ];
+
+const bgColors = ["#2e4746", "#1b2c2c", "#172426", "#111c1d"];
 
 export const ProjectsSection = () => (
   <section className="pb-16 lg:py-24">
     <div className="container">
-      <div className="flex justify-center">
-        <p
-          className="uppercase font-semibold tracking-widest 
-        bg-gradient-to-r from-emerald-300 to-sky-400 
-        text-transparent bg-clip-text text-center"
-        >
-          Real-world results
-        </p>
-      </div>
-      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured projects</h2>
-      <p
-        className="text-center md:text-lg lg:text-xl
-       text-white/60 mt-4 max-w-md mx-auto"
-      >
-        See how I transformed concepts into engaging digital experiences.
-      </p>
-      <div className="mt-10 nd:mt-20 flex flex-col gap-20">
-        {portfolioProjects.map((project) => (
-          <div
-            key={project.title}
-            className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden 
-            after:z-10 after:content-[''] after:absolute after:inset-0 
-            after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none
-            px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
-          >
-            <div
-              className="absolute inset-0 -z-10 opacity-5"
-              style={{
-                backgroundImage: `url(${grainImage.src})`
-              }}
-            ></div>
+      <SectionHeader
+        title="Featured projects"
+        eyebrow="Real-world results"
+        description="See how I transformed concepts into engaging digital experiences."
+      />
+      <div className="mt-10 md:mt-20 flex flex-col gap-20 scroll-mt-5">
+        {portfolioProjects.map((project, index) => (
+          <Card key={project.title} className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
                 <div
@@ -124,7 +115,7 @@ export const ProjectsSection = () => (
                 />
               </div>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>
