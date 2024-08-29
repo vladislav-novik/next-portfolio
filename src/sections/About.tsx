@@ -96,20 +96,22 @@ export const AboutSection = () => {
       />
       <div className="mt-20 flex flex-col gap-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-          <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+          <Card className="h-[320px] md:col-span-2 lg:col-span-1 bg-transparent/15 group">
             <CardHeader
               title="My Reads"
               description="Explore the books shaping my perspectives."
+              iconClassName="group-hover:rotate-45 transition-transform duration-300"
             />
             <div className="w-40 mx-auto mt-2 md:mt-0">
               <Image src={bookImage} alt="Book cover" />
             </div>
           </Card>
-          <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2">
+          <Card className="h-[320px] p-0 md:col-span-3 lg:col-span-2 bg-transparent/15 group">
             <CardHeader
               title="My Toolbox"
               description="Explore the technologies and tools I use to create unbelivable digital experiences."
               className=""
+              iconClassName="group-hover:rotate-45 transition-transform duration-300"
             />
             <ToolboxItems
               items={toolboxItems}
@@ -122,11 +124,12 @@ export const AboutSection = () => {
               itemsWrapperClassName="animate-move-right [animation-duration:15s]"
             />
           </Card>
-          <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+          <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2 bg-transparent/15 group">
             <CardHeader
               title="Beyond the code"
               description="Explore my interest and hobbies beyond the digital realm."
               className="px-6 py-6"
+              iconClassName="group-hover:rotate-45 transition-transform duration-300"
             />
             <div className="relative flex-1" ref={constraintRef}>
               {hobbies.map((hobby) => (
@@ -134,7 +137,7 @@ export const AboutSection = () => {
                   key={hobby.title}
                   className="inline-flex items-center 
                 gap-2 px-6 
-                bg-gradient-to-t from-emerald-300 to-sky-400 
+                bg-gradient-to-t from-green-500 to-sky-400 
                 rounded-full py-1.5 absolute"
                   style={{
                     left: hobby.left,
@@ -155,7 +158,7 @@ export const AboutSection = () => {
               ))}
             </div>
           </Card>
-          <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+          <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1 bg-transparent/15">
             <Image
               src={mapImage}
               alt="Map"
@@ -171,12 +174,12 @@ export const AboutSection = () => {
             >
               <div
                 className="absolute inset-0 rounded-full 
-              bg-gradient-to-r from-emerald-300 to-sky-400
+              bg-gradient-to-r from-green-500 to-sky-400
               -z-20 animate-ping [animation-duration:2s]"
               ></div>
               <div
                 className="absolute inset-0 rounded-full 
-              bg-gradient-to-r from-emerald-300 to-sky-400
+              bg-gradient-to-r from-green-500 to-sky-400
               -z-10"
               ></div>
               <Image

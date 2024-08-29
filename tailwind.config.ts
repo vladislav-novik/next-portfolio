@@ -24,6 +24,23 @@ const config: Config = {
       },
     },
     extend: {
+      colors: {
+        emerald: {
+          300: 'rgb(97 255 184)',
+          400: 'rgb(110 231 183)',
+        },
+        gray: {
+          900: 'rgb(8, 24, 34)',
+        },
+        green: {
+          500: 'rgb(198 252 166)',
+          600: 'rgb(34 197 94)'
+        },
+        sky: {
+          400: 'rgba(167, 252, 238, .7400000095367432)',
+          500: 'rgb(56 189 248)',
+        },
+      },
       fontFamily: {
         sans: "var(--font-sans)",
         serif: "var(--font-serif)",

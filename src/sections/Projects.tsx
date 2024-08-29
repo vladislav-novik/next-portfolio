@@ -60,7 +60,11 @@ const portfolioProjects = [
 const bgColors = ["#2e4746", "#1b2c2c", "#172426", "#111c1d"];
 
 export const ProjectsSection = () => (
-  <section className="pb-16 lg:py-24">
+  <section className="pb-16 lg:py-24 relative overflow-x-clip">
+    <div
+      className="hidden lg:block absolute w-[900px] h-[1400px] -left-1/3 top-1/3 rounded-full
+      bg-gradient-to-r from-green-500 to-sky-400 blur-[450px] opacity-30"
+    ></div>
     <div className="container">
       <SectionHeader
         title="Featured projects"
@@ -77,7 +81,7 @@ export const ProjectsSection = () => (
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
                 <div
-                  className="bg-gradient-to-r from-emerald-300 to-sky-400
+                  className="bg-gradient-to-r from-green-500 to-sky-400
               inline-flex gap-2 font-bold uppercase tracking-widest
               text-sm text-transparent bg-clip-text"
                 >
