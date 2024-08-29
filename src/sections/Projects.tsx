@@ -68,7 +68,7 @@ export const ProjectsSection = () => (
         description="See how I transformed concepts into engaging digital experiences."
       />
       <div className="mt-10 md:mt-20 flex flex-col gap-20 scroll-mt-5">
-        {portfolioProjects.map((project, index) => (
+        {portfolioProjects.map((project) => (
           <Card key={project.title} className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
