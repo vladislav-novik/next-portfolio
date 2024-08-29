@@ -44,17 +44,17 @@ const portfolioProjects = [
     image: aiStartupLandingPage
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Saas Landing Page",
+    company: "Quantum Dynamics",
+    year: "2023",
+    title: "Non AI Startup Landing Page",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" }
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" }
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage
-  }
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage
+  },
 ];
 
 const bgColors = ["#2e4746", "#1b2c2c", "#172426", "#111c1d"];
@@ -68,8 +68,12 @@ export const ProjectsSection = () => (
         description="See how I transformed concepts into engaging digital experiences."
       />
       <div className="mt-10 md:mt-20 flex flex-col gap-20 scroll-mt-5">
-        {portfolioProjects.map((project) => (
-          <Card key={project.title} className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20">
+        {portfolioProjects.map((project, index) => (
+          <Card key={project.title} className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+            style={{
+              top: `calc(5rem + ${index * 3}rem)`,
+            }}
+          >
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
                 <div
