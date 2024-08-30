@@ -22,7 +22,11 @@ export const ToolboxItems = ({
       )}
     >
       <div
-        className={twMerge(`flex flex-none py-0.5 gap-6 pr-6`, itemsWrapperClassName)}
+        className={twMerge(
+          `flex flex-none py-0.5 gap-6 pr-6`,
+          itemsWrapperClassName,
+          "group hover:[animation-play-state:paused]"
+        )}
       >
         {[...Array(2)].map((_, idx) => (
           <Fragment key={idx}>

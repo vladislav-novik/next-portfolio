@@ -116,12 +116,12 @@ export const AboutSection = () => {
             <ToolboxItems
               items={toolboxItems}
               className=""
-              itemsWrapperClassName="animate-move-left [animation-duration:15s]"
+              itemsWrapperClassName="animate-move-left [animation-duration:15s] group-hover:[animation-play-state:paused]"
             />
             <ToolboxItems
               items={toolboxItems}
               className="mt-6"
-              itemsWrapperClassName="animate-move-right [animation-duration:15s]"
+              itemsWrapperClassName="animate-move-right [animation-duration:15s] group-hover:[animation-play-state:paused]"
             />
           </Card>
           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2 bg-transparent/15 group">
@@ -136,7 +136,7 @@ export const AboutSection = () => {
                 <motion.div
                   key={hobby.title}
                   className="inline-flex items-center 
-                gap-2 px-6 
+                gap-2 px-6 cursor-grab
                 bg-gradient-to-t from-green-500 to-sky-400 
                 rounded-full py-1.5 absolute"
                   style={{
@@ -144,6 +144,9 @@ export const AboutSection = () => {
                     top: hobby.top,
                   }}
                   drag
+                  whileDrag={{
+                    cursor: "grabbing",
+                  }}
                   dragConstraints={constraintRef}
                   dragTransition={{
                     bounceStiffness: 400,
