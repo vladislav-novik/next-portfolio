@@ -6,6 +6,7 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+
 const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -63,7 +64,7 @@ export const ProjectsSection = () => (
   <section className="pb-16 lg:py-24 relative overflow-x-clip">
     <div
       className="hidden lg:block absolute w-[900px] h-[1400px] -left-1/3 top-1/3 rounded-full
-      bg-gradient-to-r from-green-500 to-sky-400 blur-[450px] opacity-30"
+      bg-gradient-to-r from-green-500 to-sky-400 blur-[450px] opacity-50"
     ></div>
     <div className="container">
       <SectionHeader
@@ -106,10 +107,10 @@ export const ProjectsSection = () => (
                   <button
                     className="bg-white text-gray-950 h-12 w-full md:w-auto
                 px-6 rounded-xl font-semibold inline-flex items-center
-                justify-center gap-2 mt-8"
+                justify-center gap-2 mt-8 group"
                   >
                     <span>Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-4" />
+                    <ArrowUpRightIcon className="size-4 group-hover:animate-move-up-right" />
                   </button>
                 </a>
               </div>

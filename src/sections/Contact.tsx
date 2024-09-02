@@ -27,9 +27,9 @@ export const ContactSection = () => {
             <div>
               <button className="text-white bg-gray-900 
               inline-flex gap-2 items-center 
-              px-6 h-12 rounded-xl w-max border border-gray-900">
+              px-6 h-12 rounded-xl w-max border border-gray-900 group">
                 <span className="font-semibold">Contact me</span>
-                <ArrowUpRightIcon className="size-4" />
+                <ArrowUpRightIcon className="size-4 group-hover:animate-move-up-right" />
               </button>
             </div>
           </div>

@@ -26,10 +26,10 @@ export const Footer = () => (
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5  hover:text-gray-400 transition-colors"
+              className="inline-flex items-center gap-1.5 hover:text-green-500 transition-colors group"
             >
               <span className="font-semibold">{link.title}</span>
-              <ArrowUpRightIcon className="size-4" />
+              <ArrowUpRightIcon className="size-4 group-hover:animate-move-up-right" />
             </a>
           ))}
         </nav>

@@ -49,6 +49,8 @@ const config: Config = {
         'ping-large': 'ping-large 1s ease-in-out infinite',
         'move-left': 'move-left 1s linear infinite',
         'move-right': 'move-right 1s linear infinite',
+        'wave': 'wave 2.5s ease-in-out infinite',
+        'move-up-right': 'move-up-right 0.3s ease-in-out forwards',
       },
       keyframes: {
         'ping-large': {
@@ -73,6 +75,20 @@ const config: Config = {
             transform: 'translateX(0)',
           },
         },
+        'move-up-right': {
+          '0%': { transform: 'translate(0, 0)' },
+          '100%': { transform: 'translate(2px, -2px)' },
+        },
+        'wave': {
+          '0%': { transform: 'rotate(0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10deg)' },
+          '60%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        }
       },
     },
   },

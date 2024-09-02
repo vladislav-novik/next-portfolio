@@ -8,8 +8,8 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div className="py-32 md:py-48 lg:py-60 relative overflow-x-clip">
+      <div className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{
@@ -135,12 +135,12 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl group">
             <span className="font-semibold">Explore my work</span>
-            <ArrowDown className="size-4" />
+            <ArrowDown className="size-4 group-hover:translate-y-1 transition-all duration-300" />
           </button>
-          <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋</span>
+          <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl group">
+            <span className="group-hover:animate-wave group-hover:origin-bottom-right">👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
           </button>
         </div>
